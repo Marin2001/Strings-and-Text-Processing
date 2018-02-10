@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace N_10
+namespace _10_N
 {
     class Program
     {
@@ -12,8 +12,8 @@ namespace N_10
         {
             List<int> nums = new List<int>();
             nums = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
-            int N = (int) nums[0];
-            int number =(int) nums[1];
+            int N = (int)nums[0];
+            int number = (int)nums[1];
             int remainder;
 
             string result = null;
@@ -21,8 +21,8 @@ namespace N_10
             {
                 while (number > 0)
                 {
-                    remainder = number % N;
-                    number /= N;
+                    remainder = N % number;
+                    N /= number;
                     result = remainder.ToString() + result;
                 }
                 Console.WriteLine(result);
@@ -37,3 +37,6 @@ namespace N_10
             
 
        
+        }
+    }
+}
